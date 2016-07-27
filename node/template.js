@@ -1,11 +1,10 @@
 var express    = require("express");
  var mysql      = require('mysql');
  var connection = mysql.createConnection({
-   host     : 'localhost',
-   port     : 0000,
-   user     : 'xxxx',
-   password : 'xxxx',
-   database : 'xxxx'
+   host     : 'XXXX',
+   user     : 'XXXX',
+   password : 'XXXX',
+   database : 'XXXX'
  });
  var app = express();
  
@@ -18,8 +17,11 @@ var express    = require("express");
  }
  });
  
+
  app.get("/",function(req,res){
- connection.query('SELECT * from role', function(err, rows, fields) {
+ connection.query('SELECT title, firstname, lastname, email_address, phone, role_name, address, \
+  city, state, country, company, date_of_first_contact \
+  FROM people p join role r on p.role_id = r.id', function(err, rows, fields) {
    if (!err) {
      console.log('The solution is: ', rows);
      res.send(rows);
