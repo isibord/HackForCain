@@ -1,0 +1,25 @@
+<html>
+<div ng-app="myApp">
+<div ng-controller="PeopleCtrl">
+    <p>    Click <a ng-click="loadPeople()">here</a> to load data.</p>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Location</th>
+        <th>Phone Number</th>
+        <th>Date Joined</th>
+    </tr>
+    <tr ng-repeat="person in people">
+        <td>{{person.firstname + " " + person.lastname}}</td>
+        <td>{{person.email_address}}</td>
+        <td>{{person.role_name}}</td>
+        <td>{{person.state + ", " + person.country}}</td>
+        <td>{{person.phone}}</td>
+        <td>{{person.date_of_first_contact}}</td>
+    </tr>
+</table>
+</div>
+</div>
+</html>
