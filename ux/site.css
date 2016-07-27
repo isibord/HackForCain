@@ -18,3 +18,55 @@ td {
     color: #000;
      font-size: 14px;
 }
+
+.formheader {
+    margin-bottom: -50px;
+    height:100px;
+    color: #A9A9A9;
+    font-family: "Segoe UI";
+    font-weight: 300;
+    font-size: 1.6em;
+}
+.asterisk {
+  
+color: red;
+}
+
+.formlabel{
+  color: #A9A9A9;
+  font-family: Segoe UI;
+  font-size: 0.8em;
+  
+}
+
+.country {
+  color: #A9A9A9;
+  font-family: Segoe UI;
+  font-size: 0.8em;
+}
+
+.commentsinput {
+  min-width:22%;
+  height 20%;
+  top:0%;
+  right:0%;
+  z-index:10;
+}
+
+.submit
+{
+  float: right;
+  color: #A9A9A9;
+}
+
+.cancel {
+  float: right;
+}
+
+.submitbutton {
+    color: #A9A9A9;
+    background: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
