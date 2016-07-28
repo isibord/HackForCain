@@ -269,3 +269,7 @@ a:hover, a:focus {
 .main .page-header {
   margin-top: 0;
 }
+
+h1 {
+	color:black;
+}
