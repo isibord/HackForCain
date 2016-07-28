@@ -6,7 +6,7 @@
    password : 'Cainwebdev@2016',
    database : 'cainafricadb'
  });
- var app = express();
+ // var app = express();
  
 
 // app.listen(process.env.PORT);
