@@ -250,6 +250,7 @@ a.nav-color {
 a:hover, a:focus {
     text-decoration: none;
     background-color: #ab9a9a !important;
+	cursor:pointer;
 }
 
 /*
