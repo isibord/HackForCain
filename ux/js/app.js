@@ -27,6 +27,14 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
         })
 }])
 
+.config(function($httpProvider) {
+  //Enable cross domain calls
+  $httpProvider.defaults.useXDomain = true;
+
+  //Remove the header used to identify ajax call  that would prevent CORS from working
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+})
+
 .controller("peopleController", ['$scope', '$http', function ($scope, $http) {
 
     $scope.people = [];
@@ -37,9 +45,8 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
 
     $scope.loadPeople = function() {
         var httpRequest = $http({
-            method: 'POST',
-            url: 'ux/mock/people.json',
-            data: ""
+            method: 'GET',
+            url: 'http://localhost:3000/people'
         }).success(function(data, status) {
             console.log(data);
             $scope.people = data;
