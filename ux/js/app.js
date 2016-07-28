@@ -10,6 +10,18 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
             templateUrl: "ux/partials/people.html",
             controller: "peopleController"
         })
+        .when("/events", {
+            templateUrl: "ux/partials/events.html",
+            controller: "peopleController"
+        })
+        .when("/donor-activity", {
+            templateUrl: "ux/partials/donor-activity.html",
+            controller: "peopleController"
+        })
+        .when("/expenses", {
+            templateUrl: "ux/partials/expenses.html",
+            controller: "peopleController"
+        })
         .otherwise({
             templateUrl: "ux/partials/overview.html"
         })
@@ -26,7 +38,7 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
     $scope.loadPeople = function() {
         var httpRequest = $http({
             method: 'POST',
-            url: 'ux/mock/people.json',
+            url: 'localhost:3000/',
             data: ""
         }).success(function(data, status) {
             console.log(data);
