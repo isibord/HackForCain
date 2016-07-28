@@ -1,4 +1,4 @@
-var express    = require("express");
+// var express    = require("express");
  var mysql      = require('mysql');
  var connection = mysql.createConnection({
    host     : 'cainafricadb.db.11956473.hostedresource.com',
@@ -9,4 +9,4 @@ var express    = require("express");
  var app = express();
  
 
- app.listen(process.env.PORT);
+// app.listen(process.env.PORT);
