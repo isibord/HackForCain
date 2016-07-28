@@ -38,7 +38,7 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
     $scope.loadPeople = function() {
         var httpRequest = $http({
             method: 'POST',
-            url: 'localhost:3000/',
+            url: 'ux/mock/people.json',
             data: ""
         }).success(function(data, status) {
             console.log(data);
