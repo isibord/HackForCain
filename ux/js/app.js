@@ -10,6 +10,18 @@ var app = angular.module("app", ['ngRoute', 'ui.bootstrap'])
             templateUrl: "ux/partials/people.html",
             controller: "peopleController"
         })
+        .when("/events", {
+            templateUrl: "ux/partials/events.html",
+            controller: "peopleController"
+        })
+        .when("/donor-activity", {
+            templateUrl: "ux/partials/donor-activity.html",
+            controller: "peopleController"
+        })
+        .when("/expenses", {
+            templateUrl: "ux/partials/expenses.html",
+            controller: "peopleController"
+        })
         .otherwise({
             templateUrl: "ux/partials/overview.html"
         })
